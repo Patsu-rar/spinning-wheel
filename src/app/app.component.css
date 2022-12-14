@@ -84,6 +84,10 @@ h3 {
     text-align: center;
   }
 
+  .info-form {
+    width: 100%;
+  }
+
   .form-input {
     width: auto;
   }

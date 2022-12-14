@@ -1,12 +1,12 @@
 .wheel-background {
   position: relative;
-  background-image: url(../../assets/images/wheel-background.png);
-  background-size: 88%;
-  background-position: 50% 22%;
+  background-image: url(../../assets/images/spinner-logo.png);
+  background-size: 14%;
+  background-position: 50% 49%;
   background-repeat: no-repeat;
 }
 
-.wheel-border {
+.wheel-outer-border {
   top: 7%;
   left: 7%;
   height: 85%;
@@ -14,6 +14,29 @@
   position: absolute;
   border: 2px solid #dadbdc;
   border-radius: 50%;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+}
+
+.wheel-middle-border {
+  top: 10%;
+  left: 10%;
+  height: 79%;
+  width: 79%;
+  position: absolute;
+  border: 2px solid #dadbdc;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+.wheel-inner-border {
+  top: 37%;
+  left: 37%;
+  height: 25%;
+  width: 25%;
+  position: absolute;
+  border: 2px solid #dadbdc;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
 }
 
 .wheel-spinner {
