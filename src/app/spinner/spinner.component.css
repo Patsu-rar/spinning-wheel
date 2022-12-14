@@ -1,6 +1,29 @@
+.wheel-background {
+  position: relative;
+  background-image: url(../../assets/images/wheel-background.png);
+  background-size: 88%;
+  background-position: 50% 22%;
+  background-repeat: no-repeat;
+}
+
+.wheel-border {
+  top: 7%;
+  left: 7%;
+  height: 85%;
+  width: 85%;
+  position: absolute;
+  border: 2px solid #dadbdc;
+  border-radius: 50%;
+}
+
+.wheel-spinner {
+  position: relative;
+  z-index: 1000;
+}
+
 @media screen and (max-width: 576px) {
   .wheel-spinner {
-    width: 350px;
-    height: 350px;
+    width: 330px;
+    height: 330px;
   }
 }

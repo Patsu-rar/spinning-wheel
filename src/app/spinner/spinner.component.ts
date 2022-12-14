@@ -53,8 +53,10 @@ export class SpinnerComponent implements OnChanges, OnDestroy {
       segments?.map((el: any) => {
         el.textFillStyle = el.fillStyle === "#ffffff" ? "#000000" : "#ffffff";
         el.textFontSize = 16;
+        el.strokeStyle = el.fillStyle;
       });
 
+      console.log(segments);
       // @ts-ignore
       this.theWheel = new Winwheel({
         numSegments: segments?.length,
