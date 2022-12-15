@@ -44,7 +44,7 @@
   z-index: 1000;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 750px) {
   .wheel-spinner {
     width: 330px;
     height: 330px;

@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {SpinnerComponent, TextAlignment, TextOrientation} from "./spinner/spinner.component";
 import {Spinner, SpinnerService} from "./spinner.service";
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy{
     email: new FormControl('', [Validators.required, Validators.email]),
   });
 
-  isMobileView: boolean = window.innerWidth <= 576;
+  isMobileView: boolean = window.innerWidth <= 750;
   subscribers: Subscription[] = [];
   spinningID: number = 0;
   idToLandOn: any;
@@ -38,6 +38,11 @@ export class AppComponent implements OnInit, OnDestroy{
     },0);
 
     this.items = this.spinnerService.getAllData();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isMobileView = window.innerWidth <= 750;
   }
 
   before() {
